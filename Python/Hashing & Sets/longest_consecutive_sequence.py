@@ -13,10 +13,10 @@ class Solution:
 
         ans = 1
         for i in st:
-            if i - 1 in st:
-                continue
-            else:
+            if not i - 1 in st:
+                length = 1
                 while i + 1 in st:
-                    ans += 1
-                    st.remove(i)
+                    length += 1
                     i += 1
+                ans = ans if ans > length else length
+        return ans

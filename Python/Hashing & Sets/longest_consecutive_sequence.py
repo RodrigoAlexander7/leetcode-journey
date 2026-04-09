@@ -1,4 +1,6 @@
 # 128 Longest Consecutive Sequence
+from typing import List
+from collections import defaultdict
 
 class Solution:
     def longestConsecutive(self, nums: List[int]) -> int:
